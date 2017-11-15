@@ -1,0 +1,8 @@
+/* Styles go here */
+
+input {width:60px;}
+#adjust{display:none;}
+.title {text-align: center;}
+.bigCheckbox {width:80px; height:60px;}
+
+canvas{border: 2px solid black; display:block;margin:auto;margin-top:25px; margin-bottom:10px;}
