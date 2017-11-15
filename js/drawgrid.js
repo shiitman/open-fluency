@@ -125,9 +125,15 @@ class Draw {
       context.strokeStyle = '#111111';
       context.fillStyle = '#111111';
       y = this.startY - volumeCurve[i].vol;
-      if (volumeCurve[i].vol > this.middleVolume && volumeCurve[i].time < this.indent) {
-        context.strokeStyle = '#ff1111';
-        context.fillStyle = '#ff1111';
+      if (volumeCurve[i].vol > this.middleVolume) {
+        if (volumeCurve[i].time < this.indent){
+           context.strokeStyle = '#ff1111';
+           context.fillStyle = '#ff1111';
+        }else {
+           context.strokeStyle = '#11ee11';
+           context.fillStyle = '#11ee11';
+        }
+        
       }
       context.lineTo(x, y);
       context.lineWidth = 1;
@@ -176,5 +182,4 @@ class Draw {
       this.writeText(text);
     }
   }
-
 }
