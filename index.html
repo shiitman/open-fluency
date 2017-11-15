@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <link data-require="bootstrap@*" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+  <script data-require="bootstrap@*" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/drawgrid.js"></script>
+  <script src="js/microphone.js"></script>
+  <script src="js/fluency.js"></script>
+</head>
+
+<body>
+  <h1 class="title">Open Fluency</h1>
+  <canvas  id="canvas" height="400px"></canvas>
+
+   <div  class="row">
+    <div class="col-md-5"></div>
+    <div class="btn-group-vertical  col-md-2" role="group">
+      <div class="btn-group" role="group">
+        <button id="hear" type="button" class="btn btn-success btn-lg">Start</button>
+        <label class="btn-lg">
+          <input id="equalizer" type="checkbox" autocomplete="off" class="bigCheckbox" /> Equalizer
+        </label>
+      </div>
+      <div class="btn-group" role="group">
+        <button id="settingsButtons" type="button" class="btn btn-secondary">Settings</button>
+      </div>
+    </div>
+    <div class="col-md-5"></div>
+   </div>
+
+    <div id="settings">
+      <button id="adjust">Adjust volume</button>
+        
+      <div class="row">
+          <div class="col-md-5"></div>
+          
+          <div class="btn-group-vertical col-md-2">
+            <div class="input-group"> 
+              <span class="input-group-addon">Low volume</span>
+              <input type="number" class="form-control" id="lowVolume"  value="10" />
+            </div>
+            <div class="input-group"> 
+              <span class="input-group-addon">Middle volume</span>
+              <input type="number" class="form-control" id="middlevolume" value="100" />
+            </div>
+         </div>
+
+         <div class="col-md-5"></div>
+         
+      </div>
+      
+      <div class="row">
+          <div class="col-md-5"></div>
+          
+          <div class="btn-group-vertical col-md-2">
+            <div class="input-group"> 
+              <span class="input-group-addon">Fluent Beginning</span>
+              <input type="number" class="form-control" id="indent" value="200" />
+              <span class="input-group-addon">ms</span>
+            </div>
+            <div class="input-group"> 
+              <span class="input-group-addon">Pause</span>
+              <input type="number"  class="form-control" id="pause" value="2000" />
+              <span class="input-group-addon">ms</span>
+            </div>
+            <div class="input-group"> 
+              <span class="input-group-addon">Intro</span>
+              <input type="number"  class="form-control" id="intro" value="200" />
+              <span class="input-group-addon">ms</span>
+            </div>
+            <div class="input-group"> 
+              <span class="input-group-addon">Smoothing</span>
+              <input type="number"class="form-control" id="smoothing" value="0.1"  step="0.01"  />
+            </div>
+          </div>
+          <div class="col-md-5"></div>
+          
+      </div>
+       
+    </div>
+ 
+   <audio id="player"></audio>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
+
