@@ -106,7 +106,7 @@ class Draw {
     context.beginPath();
     context.font = '18pt Calibri';
     context.fillStyle = 'black';
-    context.fillText(text, Math.round(canvas.width / 2), Math.round(this.height/8)); //this.startY - Math.round(this.height/2)
+    context.fillText(text, Math.round((canvas.width - context.measureText(text).width)/2)+this.startX, Math.round(this.height/8)); //this.startY - Math.round(this.height/2)
   }
   
   drawUpdate(volumeCurve) {
@@ -182,4 +182,5 @@ class Draw {
       this.writeText(text);
     }
   }
+
 }
