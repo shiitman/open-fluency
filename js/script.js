@@ -4,10 +4,12 @@ var fluency = new Fluency(drawGrid, micro);
 
 function initInput(id, func){
   $("#"+id).keyup(function(){
-  //  $("#"+id).change();
+   // $("#"+id).change();
   });
   $("#"+id).change(function(){
-    $("#"+id).val(fluency[func]($("#"+id).val()));    
+    console.log($("#"+id).val());
+    $("#"+id).val(fluency[func]($("#"+id).val())); 
+    fluency.startScreen();
   });
 }
 
