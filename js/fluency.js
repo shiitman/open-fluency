@@ -81,6 +81,10 @@
       return parseFloat(sm);
     }
 
+    startScreen(){
+      this.vizualizer.fullRedraw(null, [], "Press START button and begin to speak");
+    }
+
     startHear() {
       this.time = 0;
       this.speachStopped = false;
