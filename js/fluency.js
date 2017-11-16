@@ -42,6 +42,7 @@
     }
 
     setIndent(ind) {
+      console.log(ind);
       this.indent = parseInt(ind);
       this.vizualizer.indent = this.indent;
       return this.indent;
@@ -82,7 +83,8 @@
     }
 
     startScreen(){
-      this.vizualizer.fullRedraw(null, [], "Press START button and begin to speak");
+      if (!this.hear)
+       this.vizualizer.fullRedraw(null, [], "Press START button and begin to speak");
     }
 
     startHear() {
