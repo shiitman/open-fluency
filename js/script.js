@@ -38,6 +38,7 @@ $("#settings").hide();
 
 fluency["setMiddleVolume"]("50");
 $("#middlevolume").val(fluency.middleVolume);
+fluency.startScreen();
 
 if (!micro.hasGetUserMedia()) {
   alert('getUserMedia() is not supported in your browser');
